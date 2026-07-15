@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .filter_header {
     display: flex;
@@ -27,4 +28,35 @@ footer {
 
 .footer__copyright {
   color: white;
+=======
+
+.filter_header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 12px 24px;
+}
+
+#pokemonList{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pokemon-card{
+  padding: 0.5rem;
+}
+
+footer {
+  position: relative;
+  background-color: #242424;
+  display: flex;
+  padding: 6% 0;
+  justify-content:center;
+  text-align:center;
+}
+
+.footer__copyright {
+  color: white;
+>>>>>>> 98c2650076c8deab8fbae5d85ff9440d3b1cb135
 }
