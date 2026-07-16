@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,9 @@
     <link rel="stylesheet" href="M5.css">
 </head>
 <body>
+    <header class="heading">
+        This is a header for the Pokemon filter
+    </header>
     <div class="filter_header">
     <select id="pokemon_Filter" onchange="filterPokemon(event.target.value)">
         <option value="">Select a option</option>
@@ -22,48 +24,14 @@
     <div class="pokemon_search">
     <input type="text" id="pokemonName" placeholder="Enter Pokemon name/ID">
     <button onclick="fetchData()">Fetch Pokemon</button><br>
-    
+
     <input type="text" id="pokemonType" placeholder="Enter Pokemon Type">
     <button onclick="fetchDataType()">Fetch Pokemon Types</button><br>
     <img id="pokemonSprite" src="" alt="PokemonImage" style="display: none;">
     <p class="pokemonName"></p>
     </div>
     <div id="pokemonList"></div>
-    <footer>
-                <div class="footer__copyright">Javascript Pokemon Filter <br> Copyright © 2026 Benjamin Zhu</div>
-    </footer>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/4b80d320e6.js" crossorigin="anonymous"></script>
-    <script src="M5.js" defer></script>
-    <link rel="stylesheet" href="M5.css">
-</head>
-<body>
-    <div class="filter_header">
-    <select id="pokemon_Filter" onchange="filterPokemon(event.target.value)">
-        <option value="">Select a option</option>
-        <option value="AtoZ">Alphabetical A to Z</option>
-        <option value="ZtoA">Reverse Alphabetical Z to A</option>
-        <option value="newID">ID Newest to Oldest</option>
-        <option value="oldID">ID Oldest to Newest</option>
-    </select>
-    </div>
-    <div class="pokemon_search">
-    <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
-    <button onclick="fetchData()">Fetch Pokemon</button><br>
-    <img id="pokemonSprite" src="" alt="PokemonImage" style="display: none;">
-    <p class="pokemonName"></p>
-    </div>
-    <div id="pokemonList"></div>
-    <footer>
-                <div class="footer__copyright">Javascript Pokemon Filter <br> Copyright © 2026 Benjamin Zhu</div>
-    </footer>
-</body>
->>>>>>> 98c2650076c8deab8fbae5d85ff9440d3b1cb135
-</html>
+<footer>
+            <div class="footer__copyright">Javascript Pokemon Filter <br> Copyright © 2026 Benjamin Zhu</div>
+</footer>

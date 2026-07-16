@@ -61,32 +61,38 @@ async function fetchData(){
         const nameElement = document.querySelector(".pokemonName");
         imgElement.src = pokemonSprite;
         imgElement.style.display = "block";
-        nameElement.textContent = dataName.pokemon;
+        nameElement.textContent = dataName.name;
         return dataName;
       }
     catch(error){
         console.error(error);
     }
 }
+async function fetchDataType() {
+  try {
+    const pokemonType = document
+      .getElementById("pokemonType")
+      .value.trim()
+      .toLowerCase();
+    const responseType = await fetch(
+      `https://pokeapi.co/api/v2/type/${pokemonType}/`
+    );
+    if (!responseType.ok) {
+      throw new Error("Could not fetch Pokémon type");
+    }
+    const dataType = await responseType.json();
+    const typedPokemon = dataType.pokemon.map((item) => {
+      const id = item.pokemon.url.split("/").filter(Boolean).pop();
+      return {
+        name: item.pokemon.name,
+        id: Number(id),
+      };
+    });
 
-async function fetchDataType(){
-    try{
-        const pokemonType = document.getElementById("pokemonType").value.toLowerCase();
-        const responseType = await fetch(`https://pokeapi.co/api/v2/type/${pokemonType}/`);
-        const dataType = await responseType.json();
-       if(!responseType.ok){
-          throw new Error("could not fetch response");
-        }
-        const pokemonSprite = dataType.sprites.front_default;
-        const imgElement = document.getElementById("pokemonSprite");
-        const nameElement = document.querySelector(".pokemonName");
-        imgElement.src = pokemonSprite;
-        imgElement.style.display = "block";
-        nameElement.textContent = dataType.name;
-    }
-    catch(error){
-        console.error(error);
-    }
+    displayPokemon(typedPokemon);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 // async function fetchData(){
@@ -108,14 +114,4 @@ async function fetchDataType(){
 //         console.error(error);
 //     }
 // }
-
-// fetch("https://pokeapi.co/api/v2/pokemon/pikachu/")
-//     .then(response => {
-//         if(!response.ok){
-//             throw new Error("Could not fetch resource")
-//         }
-//         return response.json();
-//     })
-//     .then(data => console.log(data.types[0].type.name))
-//     .catch(error => console.error(error));
 
