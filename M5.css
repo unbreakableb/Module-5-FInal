@@ -1,23 +1,50 @@
 
-.filter_header {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    padding: 12px 24px;
+body{
+  margin: 0;
+  padding: 0;
+}
+
+input{
+  field-sizing: content;
+  min-width: 15%;
+  max-width: 100%; 
+  min-height: 2rem;
+  max-height: 2rem;
+}
+
+.heading{
+  color:rgba(255, 255, 255, 0.973);
+  background-color: #242424;
+  display: flex;
+  padding: 6% 0;
+  justify-content:center;
+  text-align:center;
+}
+
+.filter_header, .pokemon_search {
+  display: flex;
+  justify-content:center;
+}
+
+
+.pokemonSprite{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 #pokemonList{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
 }
 
 .pokemon-card{
-  padding: 0.5rem;
+  padding: 0.75rem;
 }
 
 footer {
-  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
@@ -26,5 +53,5 @@ footer {
 }
 
 .footer__copyright {
-  color: white;
+  color: rgba(255, 255, 255, 0.973);
 }

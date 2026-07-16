@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="M5.css">
 </head>
 <body>
-    <header class="heading">
+    <h1 class="heading">
         This is a header for the Pokemon filter
-    </header>
+    </h1>
     <div class="filter_header">
     <select id="pokemon_Filter" onchange="filterPokemon(event.target.value)">
         <option value="">Select a option</option>
@@ -22,16 +22,18 @@
     </select>
     </div>
     <div class="pokemon_search">
-    <input type="text" id="pokemonName" placeholder="Enter Pokemon name/ID">
+    <input type="text" id="pokemonName" placeholder="Enter Pokemon name/ID(1-1025)">
     <button onclick="fetchData()">Fetch Pokemon</button><br>
 
     <input type="text" id="pokemonType" placeholder="Enter Pokemon Type">
-    <button onclick="fetchDataType()">Fetch Pokemon Types</button><br>
+    <button onclick="fetchDataType()">Fetch Pokemon Types</button>
+    </div>
+    <div class="pokemonSprite">
     <img id="pokemonSprite" src="" alt="PokemonImage" style="display: none;">
     <p class="pokemonName"></p>
     </div>
     <div id="pokemonList"></div>
 </body>
 <footer>
-            <div class="footer__copyright">Javascript Pokemon Filter <br> Copyright © 2026 Benjamin Zhu</div>
+<div class="footer__copyright">Javascript Pokemon Filter <br> Copyright © 2026 Benjamin Zhu</div>
 </footer>
